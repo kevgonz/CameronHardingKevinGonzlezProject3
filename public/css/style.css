@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #D7CEC7
+}
+
+nav {
+  overflow: hidden;
+  padding-left: 20px;
+  color: white;
+  background-color:  rgb(0, 66, 30);
+  width: 100%;
+}
+
+nav h2{
+text-align: right; 
+padding-right: 30px;
+}
+
+nav a{
+ float: left;
+ display: block;
+ padding-right: 16px;
+ padding-bottom: 14px;
+ text-align: center;
+ text-decoration: none;
+ color: white;
+}
+
+.content {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.content a{
+text-decoration: none;
+color: grey;
+}
+
+footer {
+  color: white;
+  background-color: rgb(0, 66, 30);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#story{
+width: 50%;
+padding-top: 20px;
+padding-bottom: 20px
+}
+
+label{
+font-size: small;
+}
+
+td{
+padding-right: 10px;
+padding-bottom: 10px;
+}
+
+.align-top{
+vertical-align: top;
+}
+
+.align-right{
+text-align: right;
+}
+
+.fixed-width{
+width: 300px;
+}
+
+input, textarea{
+font-family: Arial, Helvetica, sans-serif;
+}
