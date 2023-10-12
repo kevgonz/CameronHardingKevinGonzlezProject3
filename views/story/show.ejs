@@ -1,0 +1,7 @@
+<%- include('../partials/header.ejs') %>
+    <div class = "content">
+       <h4><%= story.title%></h4>
+       <small>Posted <%= story.createdAt %> by <%= story.author %></small>
+       <div class="story"> <%= story.content %></div>
+    </div>
+<%- include('../partials/footer.ejs') %>   
