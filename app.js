@@ -22,7 +22,7 @@ app.get('/', (req, res)=>{
     res.render('index');
 });
 
-app.use('./stories', storyRoutes);
+app.use('/stories', storyRoutes);
 
 //start server
 app.listen(port, host, () =>{
