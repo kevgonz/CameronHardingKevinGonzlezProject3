@@ -1,41 +1,28 @@
 const express = require('express');
+const controller = require('../controllers/storyController');
 
 const router = express.Router();
 
 
 //send all stories
-router.get('/', (req, res)=> {
-    res.send('send all stoires');
-});
+router.get('/', controller.index);
 
 //new story
-router.get('/new', (req, res)=> {
-    res.send('send new form');
-});
+router.get('/new', controller.new);
 
 //post new story
-router.post('/', (req, res)=> {
-    res.send('create new story')
-});
+router.post('/', controller.create);
 
 //id story
-router.get('/:id', (req, res)=> {
-    res.send('send story with id' + req.params.id);
-});
+router.get('/:id', controller.show);
 
 //story edit
-router.get('/:id/edit', (req, res)=> {
-    res.send('send story edit');
-});
+router.get('/:id/edit', controller.edit);
 
 //put story update
-router.put('/:id', (req, res)=> {
-    res.send('send story with id' + req.params.id);
-});
+router.put('/:id', controller.update);
 
 //delete
-router.delete('/:id', (req, res)=> {
-    res.send('delete story with id' + req.params.id);
-});
+router.delete('/:id', controller.delete);
 
-module.export = router;
+module.exports = router;
