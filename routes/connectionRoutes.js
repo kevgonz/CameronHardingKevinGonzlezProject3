@@ -1,25 +1,25 @@
 const express = require('express');
-const controller = require('../controllers/storyController');
+const controller = require('../controllers/connectionController');
 
 const router = express.Router();
 
 
-//send all stories
+//send all connections
 router.get('/', controller.index);
 
-//new story
+//new connections
 router.get('/new', controller.new);
 
-//post new story
+//post new connections
 router.post('/', controller.create);
 
-//id story
+//id connections
 router.get('/:id', controller.show);
 
-//story edit
+//connection edit
 router.get('/:id/edit', controller.edit);
 
-//put story update
+//put connection update
 router.put('/:id', controller.update);
 
 //delete

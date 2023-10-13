@@ -1,0 +1,57 @@
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100% !important;
+  background-color: #eeeeee !important;
+}
+img {
+  border-radius: 10%;
+}
+
+#star {
+  margin-left: -5px !important;
+  vertical-align: bottom !important;
+  opacity: 0.5;
+}
+
+.more {
+  opacity: 0.5 !important;
+}
+
+.btn:hover {
+  color: black !important;
+}
+
+.vl {
+  margin: 8px !important;
+  width: 2px;
+  border-right: 1px solid #aaaaaa;
+  height: 25px;
+}
+
+#plus {
+  opacity: 0.8;
+}
+
+.card {
+  border-radius: 25px !important;
+  border: none;
+}
+
+a:hover {
+  background-color: #ccc !important;
+}
+
+.btn-outlined:active {
+  color: #fff;
+  border-color: #fff !important;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.container {
+  margin-top: 50px !important;
+}

@@ -2,7 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const storyRoutes = require('./routes/storyRoutes');
+const connectionRoutes = require('./routes/connectionRoutes');
 
 //create app
 const app = express();
@@ -24,7 +24,7 @@ app.get('/', (req, res)=>{
     res.render('index');
 });
 
-app.use('/stories', storyRoutes);
+app.use('/connections', connectionRoutes);
 
 //start server
 app.listen(port, host, () =>{

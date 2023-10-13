@@ -1,0 +1,81 @@
+<%- include('../partials/header.ejs')%>
+<!-- Form -->
+<div class="container-fluid p-3">
+    <h1 class="text-center">Create a New Connection</h1>
+    <form action='/connections' method='POST'>
+      <div class="container-fluid p-3">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-8">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Soccer Pickup" />
+            </div>
+
+            <div class="form-floating mb-3">
+              <select class="form-select" id="sport" name="sport" aria-label="Floating label select example">
+                <option value="Soccer" selected>Soccer</option>
+                <option value="Flag-Football">Flag-Football</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Valorant">Valorant</option>
+                <option value="League of Legends">League of Legends</option>
+                <option value="Rocket League">Rocket League</option>
+              </select>
+              <label for="sport">Selection</label>
+            </div>
+
+            <div class="mb-3">
+                <input type="radio" name="catagory" id="sport" value="1">
+                <label for="sport" class="form-label">Sport</label>
+                <input type="radio" name="catagory" id="e-sport" value="2">
+                <label for="e-sport" class="form-label">E-Sport</label>
+            </div>
+
+            <div class="mb-3">
+              <label for="host" class="form-label">Host</label>
+              <input type="text" class="form-control" id="host" name="host" placeholder="John Doe" />
+            </div>
+
+            <div class="mb-3">
+              <label for="contact" class="form-label">Contact Info</label>
+              <input type="text" class="form-control" id="contact" name="contact" placeholder="Email or Discord" />
+            </div>
+
+            <div class="mb-3">
+              <label for="details" class="form-label">Details</label>
+              <input type="text" class="form-control" id="details" name="details"placeholder="Description" />
+            </div>
+
+            <div class="mb-3">
+              <label for="where" class="form-label">Where</label>
+              <input type="text" class="form-control" id="where" name="where" placeholder="Woodward 106" />
+            </div>
+
+            <div class="mb-3">
+              <label for="when" class="form-label">When</label>
+              <input type="date" class="form-control" id="when" name="when" />
+            </div>
+
+            <div class="mb-3">
+              <label for="start" class="form-label">Start</label>
+              <input type="time" class="form-control" id="start" name="start" />
+            </div>
+
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="file" class="form-control" id="image" name="image"/>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary">Create a Connection</button>
+            </div>
+
+            <div class="p-4"></div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+<!-- Form End-->
+    <%- include('../partials/footer.ejs')%>
