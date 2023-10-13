@@ -2,6 +2,10 @@
     <div class = "content">
        <h4><%= story.title%></h4>
        <small>Posted <%= story.createdAt %> by <%= story.author %></small>
-       <div class="story"> <%= story.content %></div>
+       <div id="story"> <%= story.content %></div>
+       <form>
+            <button type="Submit" formmethod="GET" formaction="/stories/<%= story.id %>/edit">Edit</button>
+            <button type="Submit" formmethod="POST" formaction="/stories/<%= story.id %>?_method=DELETE">Delete</button>
+       </form>
     </div>
 <%- include('../partials/footer.ejs') %>   

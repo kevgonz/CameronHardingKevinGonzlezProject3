@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <form action = '/stories' method = 'POST'>
+        <table>
+            <tr>
+                <td><label for="author">Author</label></td>
+                <td><input type="text" id="author" name="author" class = "fixed-width"></td>
+            </tr>
+            <tr>
+                <td><label for="title">Title</label></td>
+                <td><input type="text" id="title" name="title" class = "fixed-width"></td>
+            </tr>
+            <tr>
+                <td class = "align-top"><label for="content">Content</label></td>
+                <td><textarea rows="5" id="content" name="content" class = "fixed-width"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr>
+        </table>        
+    </form>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>
