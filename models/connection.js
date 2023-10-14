@@ -23,8 +23,8 @@ const connections = [
         contact: '123-145-6539',
         details: 'BlaBlaBlah',
         where: 'Discord',
-        when: '10/13/2023',
-        start: '11:00 PM',
+        when: '2023-10-20',
+        start: '18:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     },
     {
@@ -36,8 +36,8 @@ const connections = [
         contact: '123-145-6539',
         details: 'BlaBlaBlah',
         where: 'North Rec Feilds',
-        when: '10/13/2023',
-        start: '7:00 PM',
+        when: '2023-10-20',
+        start: '18:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     },
     {
@@ -49,8 +49,8 @@ const connections = [
         contact: '123-145-6539',
         details: 'BlaBlaBlah',
         where: 'Belk Gym',
-        when: '10/13/2023',
-        start: '7:00 PM',
+        when: '2023-10-20',
+        start: '22:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     },
     {
@@ -62,8 +62,8 @@ const connections = [
         contact: '123-145-6539',
         details: 'BlaBlaBlah',
         where: 'Discord',
-        when: '10/13/2023',
-        start: '11:00 PM',
+        when: '2023-10-20',
+        start: '22:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     },
     {
@@ -75,8 +75,8 @@ const connections = [
         contact: '123-145-6539',
         details: 'BlaBlaBlah',
         where: 'Discord',
-        when: '10/13/2023',
-        start: '11:00 PM',
+        when: '2023-10-20',
+        start: '22:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     }
 ];
