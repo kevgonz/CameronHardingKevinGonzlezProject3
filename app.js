@@ -3,6 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 const connectionRoutes = require("./routes/connectionRoutes");
+const path = require('path');
 
 //create app
 const app = express();
@@ -13,7 +14,7 @@ let host = "localhost";
 app.set("view engine", "ejs");
 
 //mount middleware
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("tiny"));
 app.use(methodOverride("_method"));

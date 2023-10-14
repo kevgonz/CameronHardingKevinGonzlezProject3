@@ -1,23 +1,48 @@
 <%- include('../partials/header.ejs') %>
-<div class="content">
-  <h4><%= story.title%></h4>
-  <small>Posted <%= story.createdAt %> by <%= story.author %></small>
-  <div id="story"><%= story.content %></div>
-  <form>
-    <button
-      type="Submit"
-      formmethod="GET"
-      formaction="/stories/<%= story.id %>/edit"
-    >
-      Edit
-    </button>
-    <button
-      type="Submit"
-      formmethod="POST"
-      formaction="/stories/<%= story.id %>?_method=DELETE"
-    >
-      Delete
-    </button>
-  </form>
+<!-- Connection -->
+<div class="container">
+  <h1>Connection</h1>
+  <div class="card mt-5 border-5 pt-2 active pb-0 px-3">
+      <div class="card-body ">
+          <div class="row">
+              <div class="col-12 ">
+                  <h4 class="card-title "><b><%= connection.title %></b></h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-6 ">
+                  <div>
+                      <div>Type: <span class="text-muted"><%= connection.sport %></span></div>
+                      <div>Host: <span class="text-muted"><%= connection.host %></span></div>
+                      <div>Contact: <span class="text-muted"><%= connection.contact %></span></div>
+                      <div>Location: <span class="text-muted"><%= connection.where %></span></div>
+                      <div>Date: <span class="text-muted"><%= connection.when %></span></div>
+                      <div>Start: <span class="text-muted"><%= connection.start %></span></div>
+                  </div>
+              </div>
+              <div class="col-6 text-center">
+                  <img src="<%= connection.image %>" height="200" alt="Logo">
+              </div>
+          </div>
+          <div class="col-6">
+              Description: <%= connection.details %>
+          </div>
+      </div>
+      <div class="card-footer bg-white px-0">
+          <div class="row">
+            <div class="col-md-auto d-flex">
+              <form action="/connections/<%= connection.id %>/edit" method="GET" class="me-2 mb-2">
+                <button class="btn btn-primary" type="submit">Edit</button>
+              </form>
+            
+              <form action="/connections/<%= connection.id %>/?_method=DELETE" method="POST" class="mb-2">
+                <button class="btn btn-primary" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>
+<!-- Connection EndS -->
+
 <%- include('../partials/footer.ejs') %>

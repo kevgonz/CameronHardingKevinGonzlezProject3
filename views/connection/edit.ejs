@@ -1,31 +1,105 @@
-<%- include('../partials/header.ejs')%>
-<div class="content">
-  <form method="POST" action="/stories/<%= story.id%>?_method=PUT">
-    <table>
-      <tr>
-        <td><label for="title">Title</label></td>
-        <td>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            value="<%= story.title%>"
-            class="fixed-width"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td class="align-top"><label for="content">Content</label></td>
-        <td>
-          <textarea rows="5" id="content" name="content" class="fixed-width">
-<%= story.content%></textarea
-          >
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" class="align-right"><button>Submit</button></td>
-      </tr>
-    </table>
+<%- include('../partials/header.ejs') %>
+<!-- Form -->
+<div class="container-fluid p-3">
+  <h1 class="text-center">Edit Connection</h1>
+  <form action="/connections/<%= connection.id %>?_method=PUT" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="Soccer Pickup"
+        value="<%= connection.title %>"
+      />
+    </div>
+
+    <div class="form-floating mb-3">
+      <select
+        class="form-select"
+        id="sport"
+        name="sport"
+        aria-label="Floating label select example"
+      >
+        <option value="Soccer" <%= connection.sport === 'Soccer' ? 'selected' : '' %>>Soccer</option>
+        <option value="Flag-Football" <%= connection.sport === 'Flag-Football' ? 'selected' : '' %>>Flag-Football</option>
+        <option value="Volleyball" <%= connection.sport === 'Volleyball' ? 'selected' : '' %>>Volleyball</option>
+        <option value="Valorant" <%= connection.sport === 'Valorant' ? 'selected' : '' %>>Valorant</option>
+        <option value="League of Legends" <%= connection.sport === 'League of Legends' ? 'selected' : '' %>>League of Legends</option>
+        <option value="Rocket League" <%= connection.sport === 'Rocket League' ? 'selected' : '' %>>Rocket League</option>
+      </select>
+      <label for="sport">Sport</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="host" class="form-label">Host</label>
+      <input
+        type="text"
+        class="form-control"
+        id="host"
+        name="host"
+        placeholder="John Doe"
+        value="<%= connection.host %>"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="contact" class="form-label">Contact Info</label>
+      <input
+        type="text"
+        class="form-control"
+        id="contact"
+        name="contact"
+        placeholder="Email or Discord"
+        value="<%= connection.contact %>"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="details" class="form-label">Details</label>
+      <input
+        type="text"
+        class="form-control"
+        id="details"
+        name="details"
+        placeholder="Description"
+        value="<%= connection.details %>"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="where" class="form-label">Where</label>
+      <input
+        type="text"
+        class="form-control"
+        id="where"
+        name="where"
+        placeholder="Woodward 106"
+        value="<%= connection.where %>"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="when" class="form-label">When</label>
+      <input type="date" class="form-control" id="when" name="when" value="<%= connection.when %>"/>
+    </div>
+
+    <div class="mb-3">
+      <label for="start" class="form-label">Start</label>
+      <input type="time" class="form-control" id="start" name="start" value="<%= connection.start %>"/>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input type="file" class="form-control" id="image" name="image" />
+    </div>
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary">Update Connection</button>
+    </div>
   </form>
 </div>
-<%- include('../partials/footer.ejs')%>
+<!-- Form End -->
+<%- include('../partials/footer.ejs') %>
+

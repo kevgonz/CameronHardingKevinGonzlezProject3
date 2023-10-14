@@ -10,8 +10,8 @@ const connections = [
         contact: '123-145-6789',
         details: 'BlaBlaBlah',
         where: 'Strikers Complex',
-        when: '10/13/2023',
-        start: '7:00 PM',
+        when: '2023-10-20',
+        start: '18:00',
         createdAt: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
     },
     {
@@ -90,16 +90,25 @@ exports.save = function(connection) {
     connections.push(connection);
 };
 
-exports.updateById = function(id, newConnection) {
-    let connection = connections.find(connection => connection.id === id);
-    if(connection){
-        connection.title = newConnection.title;
-        connection.content = newConnection.content;
-        return true; 
-    }else {
+exports.updateById = function(id, updatedConnection) {
+    let index = connections.findIndex(connection => connection.id === id);
+    if (index !== -1) {
+        connections[index].title = updatedConnection.title;
+        connections[index].sport = updatedConnection.sport;
+        connections[index].catagory = updatedConnection.catagory;
+        connections[index].host = updatedConnection.host;
+        connections[index].contact = updatedConnection.contact;
+        connections[index].details = updatedConnection.details;
+        connections[index].where = updatedConnection.where;
+        connections[index].when = updatedConnection.when;
+        connections[index].start = updatedConnection.start;
+        connections[index].image = updatedConnection.image;
+        return true;
+    } else {
         return false;
     }
-}
+};
+
 
 exports.deleteById = function(id) {
     let index = connections.findIndex(connection => connection.id === id);
