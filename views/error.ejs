@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs') %>
+<!-- Main Content -->
+<div class="container mt-5">
+  <div class="row justify-content-md-center mb-2">
+    <h1 class="col mt-5"><%= error.status%> Error</h1>
+  </div>
+  <div class="row">
+    <h4 class="col-8 mt-1"><%= error.message%></h4>
+  </div>
+</div>
+<!-- Main Content end -->
+<%- include('./partials/footer.ejs') %>
