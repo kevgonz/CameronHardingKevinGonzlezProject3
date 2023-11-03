@@ -6,6 +6,12 @@ const router = express.Router();
 //send all connections
 router.get("/", controller.index);
 
+//send about
+router.get("/about", controller.about);
+
+//send contact
+router.get("/contact", controller.contact);
+
 //new connections
 router.get("/new", controller.new);
 

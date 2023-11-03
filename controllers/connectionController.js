@@ -5,6 +5,14 @@ exports.index = (req, res) => {
   res.render("./connection/index", { connections });
 };
 
+exports.about = (req, res) => {
+  res.render("about");
+};
+
+exports.contact = (req, res) => {
+  res.render("contact");
+};
+
 exports.new = (req, res) => {
   res.render("./connection/new");
 };
