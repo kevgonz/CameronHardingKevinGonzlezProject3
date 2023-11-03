@@ -1,47 +1,43 @@
 <%- include('../partials/header.ejs') %>
-    <div class="container">
-        <%if(connections.length){%>
+<div class="container">
+  <%if(connections.length){%>
 
-            <div class="row justify-content-start mt-5">
-                <div class="col">
-                    <h1 class="mb-3">Sports</h1>
-                </div>
-            </div>
-
-            <div class="row justify-content-around">
-                <div class="col-10">
-                    <%connections.forEach(connection=>{
-                        if(connection.catagory == "1"){%>
-                            <a class="nav-link" href="/connections/<%=connection.id%>">
-                                <h3><%=connection.title%></h3>
-                            </a>
-                        <%}
-                    });%>
-                </div>
-            </div>
-
-            <div class="row justify-content-start mt-5">
-                <h1 class="mb-3">E-Sports</h1>
-            </div>
-
-            <div class="row justify-content-around">
-                <div class="col-10">
-                   <%connections.forEach(connection=>{
-                        if(connection.catagory == "2"){%>
-                            <a class="nav-link" href="/connections/<%=connection.id%>">
-                                <h3><%=connection.title%></h3>
-                            </a>
-                       <%}
-                    });%>
-                </div>
-            </div>
-
-        <%} else {%> 
-            <div class="row justify-content-start mt-5">
-                <div class="col">
-                    <h1 class="mb-3">There are no connections</h1>
-                </div>
-            </div>
-        <%}%>
+  <div class="row justify-content-start mt-5">
+    <div class="col">
+      <h1 class="mb-3">Sports</h1>
     </div>
-<%- include('../partials/footer.ejs') %>   
+  </div>
+
+  <div class="row justify-content-around">
+    <div class="col-10">
+      <%connections.forEach(connection=>{ if(connection.catagory == "1"){%>
+      <a class="nav-link" href="/connections/<%=connection.id%>">
+        <h3><%=connection.title%></h3>
+      </a>
+      <%} });%>
+    </div>
+  </div>
+
+  <div class="row justify-content-start mt-5">
+    <h1 class="mb-3">E-Sports</h1>
+  </div>
+
+  <div class="row justify-content-around">
+    <div class="col-10">
+      <%connections.forEach(connection=>{ if(connection.catagory == "2"){%>
+      <a class="nav-link" href="/connections/<%=connection.id%>">
+        <h3><%=connection.title%></h3>
+      </a>
+      <%} });%>
+    </div>
+  </div>
+
+  <%} else {%>
+  <div class="row justify-content-start mt-5">
+    <div class="col">
+      <h1 class="mb-3">There are no connections</h1>
+    </div>
+  </div>
+  <%}%>
+</div>
+<%- include('../partials/footer.ejs') %>
