@@ -1,0 +1,9 @@
+use NBAD
+db
+db.createCollection("connections")
+db.connections.insertOne({ _id: '1', title: 'Soccer Pickup', sport: 'Soccer', catagory: '1', host: 'Kevin', contact: '123-145-6789', details: 'BlaBlaBlah', where: 'Strikers Complex', when: '2023-10-20', start: '18:00', image: 'url'})
+db.connections.insertOne({ _id: '2', title: 'Rocket League Scrim', sport: 'Rocket League', catagory: '2', host: 'Cameron', contact: '123-145-6539', details: 'BlaBlaBlah', where: 'Discord', when: '2023-10-20', start: '18:00', end: '19:00', image: 'url'})
+db.connections.insertOne({ _id: '3', title: 'Flag-Football Pickup', sport: 'Flag-Football', catagory: '1', host: 'Cameron', contact: '123-145-6539', details: 'BlaBlaBlah', where: 'North Rec Feilds', when: '2023-10-20', start: '18:00', end: '19:00', image: 'url'})
+db.connections.insertOne({ _id: '4', title: 'Volleyball Pickup', sport: 'Volleyball', catagory: '1', host: 'Cameron', contact: '123-145-6539', details: 'BlaBlaBlah', where: 'Belk Gym', when: '2023-10-20', start: '22:00', end: '23:00', image: 'url'})
+db.connections.insertOne({ _id: '5', title: 'Valorant Scrim', sport: 'Valorant', catagory: '2', host: 'Cameron', contact: '123-145-6539', details: 'BlaBlaBlah', where: 'Discord', when: '2023-10-20', start: '22:00', end: '23:00', image: 'url'})
+db.connections.insertOne({ _id: '6', title: 'League of Legends Scrim', sport: 'League of Legends', catagory: '2', host: 'Cameron', contact: '123-145-6539', details: 'BlaBlaBlah', where: 'Discord', when: '2023-10-20', start: '22:00', end: '23:00', image: 'url'})
