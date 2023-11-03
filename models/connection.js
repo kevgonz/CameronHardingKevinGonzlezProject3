@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const connectionSchema = new Schema(
   {
-    id: { type: Number, required: [true, "ID number is required"] },
     title: { type: String, required: [true, "title is required"] },
     sport: { type: String, required: [true, "sport is required"] },
     catagory: { type: Number, required: [true, "title is required"] },
