@@ -12,6 +12,7 @@
         name="title"
         placeholder="Soccer Pickup"
         value="<%= connection.title %>"
+        required
       />
     </div>
 
@@ -41,6 +42,7 @@
         name="host"
         placeholder="John Doe"
         value="<%= connection.host %>"
+        required
       />
     </div>
 
@@ -53,6 +55,7 @@
         name="contact"
         placeholder="Email or Discord"
         value="<%= connection.contact %>"
+        required
       />
     </div>
 
@@ -65,6 +68,7 @@
         name="details"
         placeholder="Description"
         value="<%= connection.details %>"
+        required
       />
     </div>
 
@@ -77,22 +81,23 @@
         name="where"
         placeholder="Woodward 106"
         value="<%= connection.where %>"
+        required
       />
     </div>
 
     <div class="mb-3">
       <label for="when" class="form-label">When</label>
-      <input type="date" class="form-control" id="when" name="when" value="<%= connection.when %>"/>
+      <input type="date" class="form-control" id="when" name="when" value="<%= connection.when %>"required/>
     </div>
 
     <div class="mb-3">
       <label for="start" class="form-label">Start</label>
-      <input type="time" class="form-control" id="start" name="start" value="<%= connection.start %>"/>
+      <input type="time" class="form-control" id="start" name="start" value="<%= connection.start %>"required/>
     </div>
 
     <div class="mb-3">
       <label for="end" class="form-label">End</label>
-      <input type="time" class="form-control" id="end" name="end" value="<%= connection.end %>"/>
+      <input type="time" class="form-control" id="end" name="end" value="<%= connection.end %>"required/>
     </div>
 
     <div class="mb-3">
