@@ -52,6 +52,7 @@
             </a>
             <a href="/user/login" class="btn btn-primary me-3">Login</a>
             <a href="/user/signup" class="btn btn-primary me-3">Sign Up</a>
+            <a href="/user/logout" class="btn btn-primary me-3">Logout</a>
           </div>
         </div>
         <!-- Collapsible -->
@@ -59,5 +60,17 @@
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar end -->
+
+      <%if(errorMessages.length > 0) {
+        errorMessages.forEach(message=>{%>
+          <div> <%= message%></div>
+        <%});
+      }%>
+
+      <%if(successMessages.length > 0) {
+        successMessages.forEach(message=>{%>
+          <div> <%= message%></div>
+        <%});
+      }%>
   </body>
 </html>

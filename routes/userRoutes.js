@@ -18,4 +18,7 @@ router.post("/", controller.create);
 //profile
 router.get("/profile", controller.profile);
 
+//logout
+router.get("/logout", controller.logout);
+
 module.exports = router;
