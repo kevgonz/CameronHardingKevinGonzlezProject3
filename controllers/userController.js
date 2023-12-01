@@ -24,12 +24,12 @@ exports.login = (req, res) => {
     .catch(err=>{
       if(err.name === 'ValidationError'){
         req.flash('error', err.message);
-        return res.redirect('./user/new');
+        return res.redirect('/user/signup');
       }
 
       if(err.code === 11000){
         req.flash('error', 'Email adddress has been used');
-        return res.redirect('./user/new');
+        return res.redirect('/user/signup');
       }
       next(err);
     });
@@ -47,15 +47,15 @@ exports.login = (req, res) => {
                 if(result){
                     req.session.user = user._id;
                     req.flash('success', 'You have successfuly logged in');
-                    res.redirect('./user/profile');
+                    res.redirect('/user/profile');
                 }else{
                     req.flash('error', 'Wrong Password!');
-                    res.redirect('./user/login');
+                    res.redirect('/user/login');
                 }
             })
         }else{
             req.flash('error', 'Wrong Email Address!');
-            res.redirect('./user/login');
+            res.redirect('/user/login');
         }
     })
     .catch(err=>next(err));

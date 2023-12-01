@@ -1,13 +1,20 @@
 <%- include('../partials/header.ejs')%>
 <br>
-    <form action="/user" method="POST">
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button>Login</button><br>
+<div class="login-form">
+    <form action="/user" method="post">
+        <h2 class="text-center">Login</h2>       
+        <div class="form-group pb-2">
+            <input type="email" type="email" id="email" name="email" class="form-control" placeholder="Email" required="required">
+        </div>
+        <div class="form-group pb-2">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
+        </div>
+        <div class="form-group content-center">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>      
     </form>
-
+    <p class="text-center"><a href="/user/signup">Create an Account</a></p>
+</div>
 </body>
 
 </html>

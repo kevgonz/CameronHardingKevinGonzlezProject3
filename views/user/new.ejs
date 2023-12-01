@@ -1,16 +1,31 @@
 <%- include('../partials/header.ejs')%>
 <br>
-    <form action="/user" method="POST">
-        <label for="firstName">First Name</label><br>
-        <input type="text" id="firstName" name="firstName" required><br><br>
-        <label for="lastName">Last Name</label><br>
-        <input type="text" id="lastName" name="lastName" required><br><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button>Sign Up</button><br>
+<div class="login-form">
+    <form action="/user/create" method="POST">
+        <h2 class="text-center">Sign Up</h2>
+
+        <div class="form-group pb-2">
+            <input type="text" type="email" id="firstName" name="firstName" class="form-control" placeholder="First Name" required="required">
+        </div>
+
+        <div class="form-group pb-2">
+            <input type="text" type="email" id="lastName" name="lastName" class="form-control" placeholder="Last Name" required="required">
+        </div>
+
+        <div class="form-group pb-2">
+            <input type="email" type="email" id="email" name="email" class="form-control" placeholder="Email" required="required">
+        </div>
+
+        <div class="form-group pb-2">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
+        </div>
+
+        <div class="form-group content-center">
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </div>      
     </form>
+    <p class="text-center"><a href="/user/login">Login</a></p>
+</div>
 
 </body>
 

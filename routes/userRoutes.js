@@ -13,7 +13,7 @@ router.post("/", controller.authenticate);
 router.get("/signup", controller.signup);
 
 //post new user
-router.post("/", controller.create);
+router.post("/create", controller.create);
 
 //profile
 router.get("/profile", controller.profile);
