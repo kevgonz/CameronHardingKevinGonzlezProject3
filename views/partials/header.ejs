@@ -26,7 +26,12 @@
       <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="/">
-          <img src="/images/Logo.png" height="90" alt="Logo" style="margin-top: -1px" />
+          <img
+            src="/images/Logo.png"
+            height="90"
+            alt="Logo"
+            style="margin-top: -1px"
+          />
         </a>
 
         <!-- Collapsible-->
@@ -42,6 +47,7 @@
           </ul>
 
           <!-- Right links -->
+          <%if(user){%>
           <div class="d-flex align-items-center">
             <a
               href="/connections/new"
@@ -50,10 +56,15 @@
             >
               Start a connection
             </a>
-            <a href="/user/login" class="btn btn-primary me-3">Login</a>
-            <a href="/user/signup" class="btn btn-primary me-3">Sign Up</a>
+            <a href="/user/Profile" class="btn btn-primary me-3">Profile</a>
             <a href="/user/logout" class="btn btn-primary me-3">Logout</a>
           </div>
+          <%}else{%>
+          <div class="d-flex align-items-center">
+            <a href="/user/login" class="btn btn-primary me-3">Login</a>
+            <a href="/user/signup" class="btn btn-primary me-3">Sign Up</a>
+          </div>
+          <%}%>
         </div>
         <!-- Collapsible -->
       </div>
@@ -61,16 +72,11 @@
     </nav>
     <!-- Navbar end -->
 
-      <%if(errorMessages.length > 0) {
-        errorMessages.forEach(message=>{%>
-          <div> <%= message%></div>
-        <%});
-      }%>
-
-      <%if(successMessages.length > 0) {
-        successMessages.forEach(message=>{%>
-          <div> <%= message%></div>
-        <%});
-      }%>
+    <%if(errorMessages.length > 0) { errorMessages.forEach(message=>{%>
+    <div class="error"><%= message%></div>
+    <%}); }%> <%if(successMessages.length > 0) {
+    successMessages.forEach(message=>{%>
+    <div class="success"><%= message%></div>
+    <%}); }%>
   </body>
 </html>

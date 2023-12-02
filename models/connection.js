@@ -6,7 +6,7 @@ const connectionSchema = new Schema(
     title: { type: String, required: [true, "title is required"] },
     sport: { type: String, required: [true, "sport is required"] },
     catagory: { type: Number, required: [true, "title is required"] },
-    host: { type: String, required: [true, "host is required"] },
+    host: { type: Schema.Types.ObjectId, ref: "User" },
     contact: { type: String, required: [true, "email is required"] },
     details: { type: String, required: [true, "Details are required"] },
     where: { type: String, required: [true, "Location is required"] },

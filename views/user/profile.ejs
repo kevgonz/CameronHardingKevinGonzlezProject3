@@ -1,5 +1,13 @@
 <%- include('../partials/header.ejs')%>
 <h2>Welcome, <%= user.firstName + " " + user.lastName%></h2>
+<%if(connections.length) {%>
+    <p>You have created the following connections</p>
+    <%connections.forEach(connection => {%>
+        <a href = '/connections/<%= connection._id%>'><p><%=connection.title%></p></a>
+    <%});
+}else{%>
+    <p>You have not created any connections/p>
+<%}%>
 
 </body>
 
