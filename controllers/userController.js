@@ -22,6 +22,9 @@ exports.signup = (req, res) => {
 // Sign up (CREATE)
 exports.create = (req, res, next) => {
   let user = new User(req.body);
+  if(user.email){
+    user.email = user.email.toLowerCase();
+  }
   user
     .save()
     .then(() => res.redirect("/user/login"))
@@ -40,8 +43,11 @@ exports.create = (req, res, next) => {
 };
 
 // performs login operation(LOGIN)
-exports.authenticate = (req, res) => {
+exports.authenticate = (req, res, next) => {
   let email = req.body.email;
+  if(email){
+    email = email.toLowerCase();
+  }
   let password = req.body.password;
 
   User.findOne({ email: email })
